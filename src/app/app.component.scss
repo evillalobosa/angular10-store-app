@@ -1,0 +1,21 @@
+.products--grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 15px;
+  div {
+    img {
+      width: 100%;
+      border-radius: 8px;
+    }
+    h2, p {
+      margin: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 40em) {
+  .products--grid {
+    display: flex;
+    flex-direction: column;
+  }
+}
