@@ -1,5 +1,14 @@
 <div class="navbar--desktop">
-  <div>Mi Store</div>
-  <div>Tags</div>
-  <div>Carrito</div>
+  <div class="logo">
+    <img src="../../../assets/images/store.png" alt="logo" />
+    <div>Mi+Store</div>
+  </div>
+
+  <div class="tags">
+    <div *ngFor="let tag of tags">
+      <button type="button">{{ tag | uppercase }}</button>
+    </div>
+  </div>
+
+  <div class="cart">Carrito</div>
 </div>

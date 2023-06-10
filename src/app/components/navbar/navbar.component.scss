@@ -1,7 +1,38 @@
 .navbar--desktop {
+  position: sticky;
+  top: 0;
+  z-index: 1;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   background-color: var(--color-bg);
   color: var(--color-fg-dark);
   padding: 10px 30px;
+}
+
+.logo {
+  font-family: "Permanent Marker", cursive;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  img {
+    width: 24px;
+    margin-right: 5px;
+  }
+}
+
+.tags {
+  display: flex;
+  button {
+    background: transparent;
+    border: none;
+    padding: 5px;
+    margin: 5px;
+  }
+}
+
+@media screen and (max-width: 40em) {
+  .tags {
+    display: none;
+  }
 }

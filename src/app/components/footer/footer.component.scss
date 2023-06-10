@@ -1,11 +1,39 @@
 .footer,
-.links {
+.footer--links {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .footer {
   background-color: var(--color-bg-footer);
   color: var(--color-fg-light);
-  padding: 10px;
+  padding: 10px 30px 0;
+  font-family: "Quicksand", sans-serif;
+  font-weight: bold;
+}
+
+.footer--info {
+  font-size: 16px;
+}
+
+.footer--links a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: var(--color-fg-light);
+  padding: 5px;
+  margin: 5px;
+  font-size: 14px;
+  img {
+    width: 20px;
+    margin-right: 5px;
+  }
+}
+
+@media screen and (max-width: 40em) {
+  .footer {
+    display: flex;
+    flex-direction: column;
+  }
 }

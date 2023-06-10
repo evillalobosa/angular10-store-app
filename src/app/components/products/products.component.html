@@ -1,15 +1,18 @@
-<h1>Listado de productos</h1>
+<div class="products--wrapper">
+  <h1>Listado de productos</h1>
 
-<div *ngIf="products.length === 0">No hay articulos disponibles</div>
+  <div *ngIf="products.length === 0">No hay articulos disponibles</div>
 
-<div class="products--grid">
-  <app-product
-    [product]="product"
-    *ngFor="let product of products"
-  ></app-product>
-</div>
+  <div class="products--grid">
+    <app-product
+      [product]="product"
+      *ngFor="let product of products"
+      (addedProduct)="onAddedProduct($event)"
+    ></app-product>
+  </div>
 
-<div>
-  <button>Anterior</button>
-  <button>Siguiente</button>
+  <div>
+    <button>Anterior</button>
+    <button>Siguiente</button>
+  </div>
 </div>
