@@ -10,7 +10,7 @@ export class ProductsService {
 
   getAllProducts() {
     return this.http.get<Product[]>(
-      'https://fakestoreapi.com/products?limit=10'
+      'https://fakestoreapi.com/products?limit=12'
     );
   }
 

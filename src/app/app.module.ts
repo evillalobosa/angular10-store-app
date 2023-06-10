@@ -11,6 +11,7 @@ import { ProductsComponent } from './components/products/products.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ImgComponent } from './components/img/img.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { TruncateDescriptionPipe } from './pipes/truncate-description.pipe';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     FooterComponent,
     ImgComponent,
     NavbarComponent,
+    TruncateDescriptionPipe,
   ],
   imports: [BrowserModule, FormsModule, HttpClientModule, AppRoutingModule],
   providers: [],

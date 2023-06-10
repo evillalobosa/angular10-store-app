@@ -19,7 +19,9 @@ body {
   app-product {
     app-img {
       img {
-        border-radius: 10px;
+        width: 200px;
+        height: 200px;
+        object-fit: scale-down;
       }
     }
   }

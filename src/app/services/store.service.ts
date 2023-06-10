@@ -7,7 +7,6 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class StoreService {
   private shoppingCart: Product[] = [];
-  private totalPrice = 0;
   private cart = new BehaviorSubject<Product[]>([]);
 
   cart$ = this.cart.asObservable();
@@ -24,9 +23,8 @@ export class StoreService {
   }
 
   getTotalPrice(): number {
-    return (this.totalPrice = this.shoppingCart.reduce(
-      (sum, item) => sum + item.price,
-      0
-    ));
+    // Thanks javascript..
+    const price = this.shoppingCart.reduce((sum, item) => sum + item.price, 0);
+    return Number(price.toFixed(2));
   }
 }
