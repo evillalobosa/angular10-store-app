@@ -5,10 +5,14 @@
   </div>
 
   <div class="tags">
-    <div *ngFor="let tag of tags">
-      <button type="button">{{ tag | uppercase }}</button>
+    <button type="button">ALL</button>
+    <div *ngFor="let cat of categories">
+      <button type="button">{{ cat | uppercase }}</button>
     </div>
   </div>
 
-  <div class="cart">Carrito</div>
+  <div class="cart">
+    <img src="../../../assets/images/shopping-cart.png" alt="Shopping cart" />
+    <p>CART: cart.lenght (${{ totalPrice }})</p>
+  </div>
 </div>

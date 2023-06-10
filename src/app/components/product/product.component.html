@@ -1,9 +1,8 @@
-<div *ngIf="product.name !== ''">
-  <app-img [imgSource]="product.image"></app-img>
+<app-img [imgSource]="product.image"></app-img>
 
-  <h2>{{ product.name }}</h2>
-  <p>${{ product.price }}</p>
-  <p>{{ product.category }}</p>
+<h2>{{ product.title }}</h2>
+<p>${{ product.price }}</p>
+<p>{{ product.description }}</p>
+<p>{{ product.category }}</p>
 
-  <button type="button" (click)="onAddToCart()">Add to cart</button>
-</div>
+<button type="button" (click)="onAddToCart()">Add to cart</button>

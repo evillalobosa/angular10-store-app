@@ -21,13 +21,34 @@
   }
 }
 
+.tags button,
+.cart {
+  font-family: "Quicksand", sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+}
+
 .tags {
   display: flex;
   button {
     background: transparent;
+    opacity: 0.6;
     border: none;
     padding: 5px;
     margin: 5px;
+  }
+  button:hover {
+    opacity: 1;
+    cursor: pointer;
+  }
+}
+
+.cart {
+  display: flex;
+  align-items: center;
+  img {
+    width: 20px;
+    margin-right: 5px;
   }
 }
 

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Product } from 'src/app/interfaces/product.interface';
+import { StoreService } from 'src/app/services/store.service';
+import { ProductsService } from 'src/app/services/products.service';
 
 @Component({
   selector: 'app-products',
@@ -9,41 +11,23 @@ import { Product } from 'src/app/interfaces/product.interface';
 export class ProductsComponent implements OnInit {
   shoppingCart: Product[] = [];
   totalPrice = 0;
-  products: Product[] = [
-    {
-      id: 1,
-      name: 'El mejor juguete',
-      price: 459,
-      image:
-        'https://static.platzi.com/media/user_upload/album-6f4213d5-1d2d-4e0f-96fe-edb36c3255b4.jpg',
-      category: 'toys',
-    },
-    {
-      id: 2,
-      name: 'Bicicleta casi nueva',
-      price: 888,
-      image:
-        'https://static.platzi.com/media/user_upload/bike-143dcfe9-3190-49fd-88f7-d3bf74182072.jpg',
-    },
-    {
-      id: 3,
-      name: 'Coleción de albumnes',
-      price: 40,
-      image:
-        'https://static.platzi.com/media/user_upload/books-80160e05-d177-420b-89c5-01a97b2bdb76.jpg',
-      category: 'music',
-    },
-  ];
+  products: Product[] = [];
 
-  constructor() {}
+  constructor(
+    private storeService: StoreService,
+    private productService: ProductsService
+  ) {
+    this.shoppingCart = this.storeService.getShoppingCart();
+  }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.productService.getAllProducts().subscribe((data) => {
+      this.products = data;
+    });
+  }
 
   onAddedProduct(product: Product): void {
-    this.shoppingCart.push(product);
-    this.totalPrice = this.shoppingCart.reduce(
-      (sum, item) => sum + item.price,
-      0
-    );
+    this.storeService.addProduct(product);
+    this.totalPrice = this.storeService.getTotalPrice();
   }
 }
