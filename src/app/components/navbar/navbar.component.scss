@@ -1,15 +1,7 @@
-.header {
+.navbar--desktop {
   display: flex;
   justify-content: space-between;
   background-color: var(--color-bg);
   color: var(--color-fg-dark);
-  padding: 20px 30px;
-}
-
-.header--image {
-  opacity: 0.4;
-
-  img {
-    width: 450px;
-  }
+  padding: 10px 30px;
 }

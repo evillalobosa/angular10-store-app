@@ -1,6 +1,5 @@
 <div *ngIf="product.name !== ''">
-  <!-- TODO: Validar imagen -->
-  <img width="200" [src]="product.image" alt="product_thumbnail" />
+  <app-img [imgSource]="product.image"></app-img>
 
   <h1>{{ product.name }}</h1>
   <p>${{ product.price }}</p>

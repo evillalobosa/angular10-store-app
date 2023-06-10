@@ -1,0 +1,11 @@
+<img
+  [width]="imgWidth"
+  [src]="imgSource"
+  (error)="(onError)"
+  alt="Product img"
+  *ngIf="imgSource; else elseImg"
+/>
+
+<ng-template #elseImg>
+  <img [width]="imgWidth" [src]="imgFallback" alt="Default img" />
+</ng-template>

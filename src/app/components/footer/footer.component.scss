@@ -1,0 +1,11 @@
+.footer,
+.links {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer {
+  background-color: var(--color-bg-footer);
+  color: var(--color-fg-light);
+  padding: 10px;
+}

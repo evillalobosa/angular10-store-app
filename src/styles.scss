@@ -1,1 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+  --color-bg: #fca311;
+  --color-fg-light: #edede9;
+  --color-fg-dark: #1b263b;
+  --color-bg-footer: #1b263b;
+}
+
+body {
+  background-color: #fff;
+  margin: 0;
+}
+
+.products--grid {
+  app-product {
+    app-img {
+      img {
+        border-radius: 10px;
+      }
+    }
+  }
+}
