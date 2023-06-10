@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { StoreService } from 'src/app/services/store.service';
+import { ProductsService } from 'src/app/services/products.service';
 
 @Component({
   selector: 'app-navbar',
@@ -8,13 +9,23 @@ import { StoreService } from 'src/app/services/store.service';
 })
 export class NavbarComponent implements OnInit {
   totalPrice = 0;
+  shoppingCartItems = 0;
 
-  // TODO: limit to 4
-  categories: string[] = ['ropa', 'living', 'muebles', 'comida', 'toys'];
+  categories: string[] = [];
 
-  constructor(private storeService: StoreService) {
-    this.totalPrice = storeService.getTotalPrice();
+  constructor(
+    private storeService: StoreService,
+    private productsService: ProductsService
+  ) {}
+
+  ngOnInit(): void {
+    this.storeService.cart$.subscribe((products) => {
+      this.shoppingCartItems = products.length;
+      this.totalPrice = this.storeService.getTotalPrice();
+    });
+
+    this.productsService.getAllCategories().subscribe((data) => {
+      this.categories = data.slice(0, 4);
+    });
   }
-
-  ngOnInit(): void {}
 }
