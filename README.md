@@ -1,27 +1,28 @@
-# App
+# ✨ Store App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.2.4.
+- Este es un proyecto de demostración de una tienda online.
+- Mediante este proyecto, aprendí sobre el framework de Angular.
+- Todo esto fue gracias al curso de Angular en Platzi.
+- Los objetos listados en la página pertencen al servicio de fakestoreapi.com.
 
-## Development server
+<br>
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+# ✨ Preview
 
-## Code scaffolding
+- 👉 [Live preview]()
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+<img src="https://i.imgur.com/JlN5H4w.png" width="700">
+<br>
+<img src="https://i.imgur.com/CkdVQeL.png" width="700">
 
-## Build
+<br>
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+# ✨ Build
 
-## Running unit tests
+```sh
+$ git clone https://github.com/evillalobosa/angular10-store-app.git && cd angular10-store-app
+$ npm install
+$ npm start
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+[pkg versions](https://github.com/evillalobosa/angular10-store-app/blob/main/package.json)
