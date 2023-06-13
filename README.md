@@ -9,7 +9,7 @@
 
 # ✨ Preview
 
-- 👉 [Live preview]()
+- 👉 [Live preview](https://evillalobosa.github.io/angular10-store-app/)
 
 <img src="https://i.imgur.com/JlN5H4w.png" width="700">
 <br>
