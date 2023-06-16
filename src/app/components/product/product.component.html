@@ -1,5 +1,8 @@
 <div class="product--wrapper">
-  <app-img [imgSource]="product.image"></app-img>
+  <app-img
+    *ngIf="product.images.length > 0"
+    [imgSource]="product.images[0]"
+  ></app-img>
 
   <div class="product--info">
     <h2 class="product--title">{{ product.title }}</h2>
