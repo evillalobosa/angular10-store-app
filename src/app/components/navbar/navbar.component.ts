@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { StoreService } from 'src/app/services/store.service';
 import { ProductsService } from 'src/app/services/products.service';
+import { Category } from 'src/app/interfaces/product.interface';
 
 @Component({
   selector: 'app-navbar',
@@ -11,7 +12,7 @@ export class NavbarComponent implements OnInit {
   totalPrice = 0;
   shoppingCartItems = 0;
 
-  categories: string[] = [];
+  categories: Category[] = [];
 
   constructor(
     private storeService: StoreService,
@@ -27,5 +28,9 @@ export class NavbarComponent implements OnInit {
     this.productsService.getAllCategories().subscribe((data) => {
       this.categories = data.slice(0, 4);
     });
+  }
+
+  onClick(): void {
+    console.log('TODO: Mostrar carrito con los items');
   }
 }

@@ -15,6 +15,8 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  text-decoration: none;
+  color: var(--color-fg-dark);
   img {
     width: 24px;
     margin-right: 5px;
@@ -37,19 +39,27 @@
     border: none;
     padding: 5px;
     margin: 5px;
-  }
-  button:hover {
-    opacity: 1;
-    cursor: pointer;
+    &:hover {
+      opacity: 1;
+      cursor: pointer;
+    }
   }
 }
 
-.cart {
+.cart-button {
   display: flex;
   align-items: center;
+  background: transparent;
+  border: none;
+  padding: 5px 10px;
   img {
     width: 20px;
     margin-right: 5px;
+  }
+  &:hover {
+    background-color: var(--color-fg-light);
+    border-radius: 8px;
+    cursor: pointer;
   }
 }
 

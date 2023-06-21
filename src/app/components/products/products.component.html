@@ -11,8 +11,10 @@
     ></app-product>
   </div>
 
-  <!-- <div>
-    <button>Anterior</button>
-    <button>Siguiente</button>
-  </div> -->
+  <div class="products--nav">
+    <button type="button" (click)="prevPage()" [class.inactive]="offset == 0">
+      ANTERIOR
+    </button>
+    <button type="button" (click)="nextPage()">SIGUIENTE</button>
+  </div>
 </div>

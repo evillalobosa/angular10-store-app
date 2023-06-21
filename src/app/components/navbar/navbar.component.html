@@ -1,24 +1,24 @@
 <div class="navbar--desktop">
-  <div class="logo">
+  <a href="https://evillalobosa.github.io/angular10-store-app/" class="logo">
     <img
       src="https://raw.githubusercontent.com/evillalobosa/angular10-store-app/main/src/assets/images/store.png"
       alt="logo"
     />
     <div>Mi+Store</div>
-  </div>
+  </a>
 
   <div class="tags">
     <button type="button">ALL</button>
     <div *ngFor="let cat of categories">
-      <button type="button">{{ cat | uppercase }}</button>
+      <button type="button">{{ cat.name | uppercase }}</button>
     </div>
   </div>
 
-  <div class="cart">
+  <button type="button" (click)="onClick()" class="cart-button">
     <img
       src="https://raw.githubusercontent.com/evillalobosa/angular10-store-app/main/src/assets/images/shopping-cart.png"
       alt="Shopping cart"
     />
     <p>{{ shoppingCartItems }} ITEMS (${{ totalPrice }})</p>
-  </div>
+  </button>
 </div>

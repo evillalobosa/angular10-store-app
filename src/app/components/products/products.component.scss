@@ -1,5 +1,5 @@
 .products--wrapper {
-  padding: 20px 30px;
+  padding: 20px 30px 50px;
   h1 {
     font-family: "Quicksand", sans-serif;
   }
@@ -9,7 +9,31 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   grid-gap: 15px;
-  padding: 20px;
+  padding: 0 20px;
+}
+
+.products--nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  button {
+    border: none;
+    border-radius: 10px;
+    background-color: var(--color-fg-light);
+    padding: 20px 30px;
+    margin: 0 10px;
+    &:hover {
+      cursor: pointer;
+      background-color: var(--color-bg);
+    }
+  }
+}
+
+.inactive {
+  background-color: #fff !important;
+  &:hover {
+    cursor: not-allowed !important;
+  }
 }
 
 @media screen and (max-width: 40em) {

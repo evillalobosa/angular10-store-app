@@ -12,6 +12,8 @@ export class ProductsComponent implements OnInit {
   shoppingCart: Product[] = [];
   totalPrice = 0;
   products: Product[] = [];
+  limit = 9;
+  offset = 0;
 
   constructor(
     private storeService: StoreService,
@@ -21,9 +23,28 @@ export class ProductsComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.productService.getAllProducts().subscribe((data) => {
-      this.products = data;
-    });
+    this.loadPageContent();
+  }
+
+  loadPageContent(): void {
+    this.productService
+      .getAllProducts(this.limit, this.offset)
+      .subscribe((data) => {
+        this.products = data;
+      });
+  }
+
+  nextPage(): void {
+    this.offset += this.limit;
+    this.loadPageContent();
+  }
+
+  prevPage(): void {
+    this.offset -= this.limit;
+    if (this.offset < 0) {
+      this.offset = 0;
+    }
+    this.loadPageContent();
   }
 
   onAddedProduct(product: Product): void {

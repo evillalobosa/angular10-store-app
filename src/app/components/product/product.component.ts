@@ -8,13 +8,13 @@ import { Product } from 'src/app/interfaces/product.interface';
 })
 export class ProductComponent implements OnInit {
   @Input() product: Product = {
-    id: '',
+    id: 0,
     title: '',
     description: '',
     price: 0,
     images: [],
     category: {
-      id: '',
+      id: 0,
       name: '',
     },
   };
